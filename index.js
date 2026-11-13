@@ -67,3 +67,73 @@
 // console.log(a.x);
 // console.log(b.x);
 // s
+
+// let a = [
+//   1,
+//   2,
+//   3,
+//   "sachin",
+//   5,
+//   function x() {
+//     console.log("I am a func");
+//   },
+// ];
+// let b = [1, 2, 3, 4, 5];
+
+// let a = new Set();
+// console.log(a.length);
+// console.log(typeof a);
+// console.log(Array.isArray(a));
+
+// let a = [1, 2, 3, 4, 5];
+// let b = new Array(5, 1);
+
+// console.log(a.length);
+// console.log(b.length);
+
+// let a = [1, 2, 3, 4, 5];
+
+// a.push(6);
+// a.unshift(6);
+
+// a.pop();
+// a.shift();
+// console.log(a);
+
+// let a = [1, 2, 3, 4, 5];
+
+// let b = a.splice(2, 2, 6, 7); // mutating
+
+// let b = a.slice(1, 4); // non-mutating
+
+// console.log(a);
+// console.log(b);
+
+// let a = [1, 2, 3, 4, 5, "Sachin"];
+
+// for (let i = 0; i < a.length; i++) {
+//   console.log("element at index " + i + ` is ${a[i]}`);
+// }
+
+// let i = 0;
+
+// while (i < a.length) {
+//   console.log("element at index " + i + ` is ${a[i]}`);
+//   i++;
+// }
+
+// do {
+//   console.log("element at index " + i + ` is ${a[i]}`);
+//   i++;
+// } while (i < a.length);
+
+// let a = [1, 2, 3, 4, 5, "Sachin"];
+
+// function callMe(value, i) {
+//   console.log("element at index " + i + ` is ${value}`);
+// }
+
+// a.forEach(callMe);
+// a.map();
+// a.filter();
+// a.reduce();
