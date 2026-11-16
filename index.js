@@ -127,13 +127,49 @@
 //   i++;
 // } while (i < a.length);
 
-// let a = [1, 2, 3, 4, 5, "Sachin"];
+// let a = [1, 2, 3, 4, 5, 6];
 
 // function callMe(value, i) {
-//   console.log("element at index " + i + ` is ${value}`);
+//   //   console.log("element at index " + i + ` is ${value}`);
+//   //   if (i === 0) {
+//   //     return "I am at index 0";
+//   //   }
+//   //   return i*value;
+//   return 1;
+// }
+// let a = [0, 2, 3, 4, 5, 6];
+// function callMe1(prevValue, value, i) {
+//   // console.log("element at index " + i + ` is ${value} with previous value ${prevValue}`);
+//   //   if (i === 0) {
+//   //     return "I am at index 0";
+//   //   }
+//   //   return i*value;
+//   //   return 1;
+//   let currSum = prevValue * value;
+//   return currSum;
 // }
 
-// a.forEach(callMe);
-// a.map();
-// a.filter();
-// a.reduce();
+// let resForEach = a.forEach(callMe);
+// let resForMap = a.map(callMe);
+// let resFilter = a.filter(callMe);
+// let resReduce = a.reduce(callMe1);
+
+// console.log(resForEach);
+// console.log(resForMap);
+// console.log(resFilter);
+// console.log(resReduce);
+
+
+// let str = "string";
+// let str1 = 'string';
+// let str2 = `string`;
+// let str3 = new String("ajj");
+
+// console.log(str);
+// console.log(str3);
+
+// let str = 'apple';
+// // str[0] = 'A';
+// // Apple
+// str = str[0].toUpperCase() + str.slice(1);
+// console.log(str);
