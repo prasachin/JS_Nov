@@ -159,7 +159,6 @@
 // console.log(resFilter);
 // console.log(resReduce);
 
-
 // let str = "string";
 // let str1 = 'string';
 // let str2 = `string`;
@@ -173,3 +172,83 @@
 // // Apple
 // str = str[0].toUpperCase() + str.slice(1);
 // console.log(str);
+
+// let str = "apple is a sweet fruit."
+// let ans = "";
+// for(let i =  0; i<str.length; i++){
+//     let word = str[i];
+//     let j = i+1;
+//     while(str[j] !== ' ' && j < str.length){
+//         word = word + str[j] ;
+//         j++;
+//     }
+//     i = j;
+//     // console.log(word) ;
+//     word = word[0].toUpperCase() + word.slice(1);
+//     // console.log(word);
+//     ans += word;
+//     ans += ' ';
+// }
+// console.log(ans);
+// let str = "apple is a sweet fruit."
+// let splited = str.split(' ');
+// // console.log(splited);
+// // let ans = "";
+// for(let i =  0; i<splited.length; i++){
+//     let word = splited[i];
+//     word = word[0].toUpperCase() + word.slice(1);
+//     splited[i] = word;
+//     // ans += word;
+//     // ans += ' ';
+// }
+// console.log(splited);
+// console.log(ans);
+// str = splited.join(' ');
+// console.log(str);
+
+// let str = "I am string";
+// console.log(str.indexOf('str'));
+// console.log(str.includes('str'));
+
+// function Object(){
+//     this.name = "Sachin",
+//     this.age = 21;
+// }
+
+// // let obj = {};
+// let obj = new Object();
+// // console.log(typeof obj);
+// console.log(obj);
+
+// function Object(){
+//     this.name = "Sachin",
+//     this.age = 21;
+// }
+
+// class User {
+//   constructor(name, age) {
+//     this.name = name;
+//     this.age = age;
+//   }
+// }
+// let user1 = new User("sachin", 21);
+// let user = new User("rohit", 45);
+// user.password = '12345';
+
+// console.log(user);
+// console.log(user1);
+// let obj1 = new Object();
+// let obj2 = new Object();
+
+// obj2.password = "12345";
+
+// console.log(obj1);
+// console.log(obj2);
+
+// let obj = { name: "sachin", age: 21, password: "1234" };
+// console.log(obj.age);
+// console.log(obj['age']);
+// obj.new = 'new';
+// delete obj.password;
+// obj.password = 'new password';
+// console.log(obj);
