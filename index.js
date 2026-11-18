@@ -252,3 +252,48 @@
 // delete obj.password;
 // obj.password = 'new password';
 // console.log(obj);
+
+// let obj = { name: "Rohit", age: 45, password: "1234@" };
+// console.log(Object.keys(obj));
+// delete obj.password;
+// obj.password = 'new pass'
+// console.log(obj.password);
+// console.log(Object.getOwnPropertyDescriptor(obj, 'password'));
+// let obj = { name: "Rohit", age: 45 };
+// // console.log(obj);
+
+// Object.defineProperty(obj, "password", {
+//   value: "1234@",
+//   writable: true,
+//   enumerable: false,
+//   configurable: true,
+// });
+
+// // console.log(Object.getOwnPropertyDescriptor(obj, 'password'));
+// // console.log(obj);
+// // obj.password = 'new password';
+// console.log(Object.keys(obj));
+// // delete obj.password;
+// console.log(obj.password);
+
+// let obj = { name: "Rohit", age: 45, password: "1234@" };
+
+// // Object.freeze(obj);
+// Object.seal(obj);
+
+// console.log(obj);
+
+// // obj.password = 'New password';
+// obj.city = "Indore";
+// // delete obj.password;
+
+// console.log(obj);
+
+// let obj1 = {x:10};
+
+// let obj2 = Object.create(obj1);
+// obj2 = obj1;
+
+// console.log(Object.getPrototypeOf(obj2));
+// obj2.password = '1234';
+// console.log(obj2);
