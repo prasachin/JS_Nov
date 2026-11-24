@@ -346,3 +346,40 @@
 // obj.self = obj;
 
 // obj = JSON.stringify(obj);
+// let el = document.getElementById('desc');
+// console.log(el);
+
+// let els = document.getElementsByClassName("title");
+// console.log(els);
+// els.forEach((element) => {
+//   console.log(element);
+// });
+
+// for(let i = 0; i<els.length; i++){
+//     console.log(els[i]);
+// }
+
+// let els = document.getElementsByTagName('h1');
+// console.log(els);
+
+// let el = document.querySelector('#desc');
+// let el = document.querySelector('.title'); // first matching elem
+// let el = document.querySelectorAll('.title');
+// console.log(el);
+// el.forEach((element) => {
+//   console.log(element);
+// });
+// let el = document.getElementById('intro');
+
+// el.setAttribute('class', 'new-class');
+// console.log(el);
+
+// console.log(el.getAttribute('adsdfddf'));
+// el.removeAttribute('class');
+// console.log(el);
+
+// let el = document.createElement('h2');
+// el.textContent = 'I am a new Element';
+// console.log(el);
+
+// document.body.appendChild(el);
