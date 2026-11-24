@@ -297,3 +297,52 @@
 // console.log(Object.getPrototypeOf(obj2));
 // obj2.password = '1234';
 // console.log(obj2);
+
+// let obj1 = { x: 10 };
+
+// let obj2 = Object.create(obj1);
+
+// obj2.x = 20;
+
+// console.log(obj2.x);
+// console.log(obj1.x);
+
+// let obj = { name: "sachin", age: 21, city: "Bhilai" };
+
+// console.log(obj1.name);
+// console.log(obj);
+
+// obj = JSON.stringify(obj);
+
+// console.log(obj);
+
+// obj = JSON.parse(obj);
+
+// console.log(obj.name);
+
+// let obj = {
+//   name: "sachin",
+//   age: 21,
+//   address: { state: "CG", pin: "3746374" },
+//   //   greet: function () {
+//   //     console.log("Hey!");
+//   //   },
+//   //   x: undefined,
+// };
+
+// Object.defineProperty(obj, "password", {
+//   value: "1234",
+//   writable: true,
+//   enumerable: false,
+//   configurable: true,
+// });
+
+// console.log(obj.password);
+// obj = JSON.stringify(obj);
+// console.log(obj);
+
+// let obj = {};
+
+// obj.self = obj;
+
+// obj = JSON.stringify(obj);
