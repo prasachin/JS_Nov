@@ -383,3 +383,16 @@
 // console.log(el);
 
 // document.body.appendChild(el);
+// function callMe(e) {
+//   //   console.log("I am clicked!");
+// //   console.log(e);
+// // e.preventDefault();
+// e.stopPropagation();
+//   e.target.style.backgroundColor = "red";
+//   e.target.style.color = 'white';
+//   e.target.style.fontSize = '80px'
+// }
+
+// let el = document.getElementById("intro");
+// // console.log(el);
+// el.addEventListener("click", callMe);
