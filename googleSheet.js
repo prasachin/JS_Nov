@@ -73,13 +73,15 @@ function generateCells() {
       let cell = document.createElement("div");
       cell.contentEditable = true;
       cell.classList.add("cell");
-      rowDiv.appendChild(cell);
+      cell.setAttribute("rid", i);
+      cell.setAttribute("cid", j);
       cell.addEventListener("click", function (e) {
         selectedCell = e.target;
         let addressBar = document.querySelector("#address");
         let address = String.fromCharCode(65 + j) + (i + 1);
         addressBar.value = address;
       });
+      rowDiv.appendChild(cell);
     }
     cellsContainer.appendChild(rowDiv);
   }
@@ -113,3 +115,62 @@ underlineBtn.addEventListener("click", function () {
 clearBtn.addEventListener("click", function () {
   formulaInput.value = "";
 });
+
+cellsContainer.addEventListener(
+  "blur",
+  function (e) {
+    let cell = e.target;
+    let rid = cell.getAttribute("rid");
+    let cid = cell.getAttribute("cid");
+    let value = cell.textContent;
+    sheetDB[rid][cid].value = value;
+  },
+  true,
+);
+
+// A1 + B1
+// ["A1, "+", B1];
+// ["5", "+", "6"]
+// "5 + 6"
+function evaluateFormula(formula) {
+  if (!formula) return;
+  let tokens = formula.split(" ");
+  for (let i = 0; i < tokens.length; i++) {
+    if (/^[A-Z][0-9]+$/.test(tokens[i])) {
+      let { rid, cid } = getRIDCID(tokens[i]);
+      let value = sheetDB[rid][cid].value;
+      tokens[i] = value;
+    }
+  }
+  let expression = tokens.join(" ");
+  console.log(expression);
+  try {
+    return eval(expression);
+  } catch (e) {
+    return "Error";
+  }
+}
+
+formulaInput.addEventListener("keydown", function (e) {
+  if (e.key === "Enter") {
+    let formula = formulaInput.value;
+    let address = document.querySelector("#address").value;
+    if (!address) return;
+    let value = evaluateFormula(formula);
+    let { rid, cid } = getRIDCID(address);
+    updateUI(rid, cid, value);
+  }
+});
+
+function updateUI(rid, cid, value) {
+  console.log(selectedCell);
+  let cell = document.querySelector(`.cell[rid="${rid}"][cid="${cid}"]`);
+  if (cell) cell.textContent = value;
+  sheetDB[rid][cid] = value;
+}
+// A38438438
+function getRIDCID(address) {
+  let rid = Number(address.slice(1)) - 1;
+  let cid = address.charCodeAt(0) - 65;
+  return { rid, cid };
+}
