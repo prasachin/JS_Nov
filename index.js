@@ -396,3 +396,24 @@
 // let el = document.getElementById("intro");
 // // console.log(el);
 // el.addEventListener("click", callMe);
+
+// function callMe() {
+//   let start = Date.now();
+//   while (Date.now() - start < 5000) {}
+//   return "I am done!";
+// }
+
+// console.log(callMe())
+// console.log("End");
+
+// function callMe() {
+//   //   let start = Date.now();
+//   //   while (Date.now() - start < 5000) {}
+//   //   return "I am done!";
+//   setTimeout(() => {
+//     console.log("I am done!");
+//   }, 5000);
+// }
+
+// callMe();
+// console.log("End");
